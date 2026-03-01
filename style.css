@@ -1,0 +1,22 @@
+/* 브라우저 기본 여백 및 스크롤바 제거 */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* 스크롤바가 생기지 않게 방지 */
+    background-color: #000; /* 이미지 로딩 전 검은색 */
+}
+
+body {
+    /* 이미지 경로 설정 */
+    background-image: url('background/background_0.png');
+
+    /* 배경을 화면에 꽉 채우는 핵심 설정 */
+    background-size: cover;      /* 비율을 유지하며 화면을 가득 채움 */
+    background-position: center; /* 이미지를 화면 중앙에 배치 */
+    background-repeat: no-repeat; /* 이미지 반복 방지 */
+    
+    /* 혹시 모를 여백 차단 */
+    display: block;
+}
