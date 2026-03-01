@@ -1,22 +1,45 @@
-/* 브라우저 기본 여백 및 스크롤바 제거 */
+/* 기본 초기화 */
 html, body {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden; /* 스크롤바가 생기지 않게 방지 */
-    background-color: #000; /* 이미지 로딩 전 검은색 */
+    overflow: hidden;
 }
 
 body {
-    /* 이미지 경로 설정 */
+    /* 기존 배경 설정 */
     background-image: url('background/background_0.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #000;
 
-    /* 배경을 화면에 꽉 채우는 핵심 설정 */
-    background-size: cover;      /* 비율을 유지하며 화면을 가득 채움 */
-    background-position: center; /* 이미지를 화면 중앙에 배치 */
-    background-repeat: no-repeat; /* 이미지 반복 방지 */
+    /* 중앙 정렬을 위한 Flexbox 설정 */
+    display: flex;
+    justify-content: center; /* 가로 중앙 */
+    align-items: center;     /* 세로 중앙 */
+}
+
+/* 중앙 텍스트 스타일 */
+.center-content {
+    text-align: center;
+    color: #ffffff; /* 흰색 글씨 (원하시면 #00ff41 초록색으로 변경 가능) */
+    font-family: 'Malgun Gothic', sans-serif; /* 깔끔한 폰트 */
     
-    /* 혹시 모를 여백 차단 */
-    display: block;
+    /* 배경 이미지 위에서 잘 보이도록 그림자 효과 */
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.8), 0 0 5px rgba(255, 255, 255, 0.5);
+    z-index: 10;
+}
+
+h1 {
+    font-size: 4rem; /* 큰 제목 크기 */
+    margin-bottom: 10px;
+    letter-spacing: 8px; /* 글자 간격 넓게 */
+}
+
+p {
+    font-size: 1.5rem; /* 설명 문구 크기 */
+    letter-spacing: 3px;
+    opacity: 0.8; /* 약간 투명하게 */
 }
